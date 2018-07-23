@@ -17,7 +17,7 @@ The IBM LMIC framework is an Arduino port of the LoRaWAN-in-C framework provided
 ### Required hardware modifications to the Anarduino MiniWireless LoRA
 * Cut 78mm of wire and solder to the pin marked `ANT`. This is a 1/4 wave dipole for 915MHz.
 * Solder jumpers from the Anarduino directly to the RFM95 module. Pin 3 to RST. Pin 7 to DIO2. Pin 8 to DIO1.
-![LMIC Jumpers](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/blob/master/images/rf95w-1.jpg)
+![LMIC Jumpers](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/blob/master/images/rf95w.png)
 ### Install the IBM LMIC framework for Arduino
 In the Arduino IDE Library Manager select and install **IBM LMIC framework by IBM Version 1.5.0+arduino-2**
 ![Library Screenshot](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/blob/master/images/lmic-library.PNG)

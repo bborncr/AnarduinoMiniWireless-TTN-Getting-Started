@@ -15,4 +15,4 @@ The IBM LMIC framework is an Arduino port of the LoRaWAN-in-C framework provided
 ---
 ### Install the IBM LMIC framework for Arduino
 In the Arduino IDE Library Manager select and install **IBM LMIC framework by IBM Version 1.5.0+arduino-2**
-![Library Screenshot](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/images/lmic-library.PNG)
+![Library Screenshot](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/blob/master/images/lmic-library.PNG)

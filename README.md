@@ -25,7 +25,7 @@ The following files to modifiy will be relative to **Arduino-->libraries-->IBM_L
 The only change is the constant from `10E6` to `8E6`
 #### Set the frequency band and radio type
 * Navigate and edit `src-->lmic-->config.h`.
-* Ensure that the US915 band is selected and the EU868 band is commented out:
+* Ensure that the US915 band is selected and the EU868 band is commented out
 ```
 //#define CFG_eu868 1
 #define CFG_us915 1

@@ -6,7 +6,7 @@ The Anarduino MiniWireless LoRa board consists of an ATMEGA328p microcontroller 
 The IBM LMIC framework is an Arduino port of the LoRaWAN-in-C framework provided by IBM.
 
 ### Hardware
-* Solder a 82mm length of wire to the antenna pin.
+* Solder a 78mm length of wire to the antenna pin.
 * Solder 3 jumpers to enable the MiniWireless to function as a LoRaWAN node using LMIC.
 ### Software
 * Install the IBM LMIC framework for Arduino.

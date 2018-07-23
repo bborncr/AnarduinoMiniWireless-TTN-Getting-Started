@@ -1,9 +1,12 @@
 # AnarduinoMiniWireless-TTN-Getting-Started
-A guide to connecting the Anarduino MiniWireless (US915) to The Things Network using OTAA
+A guide to connecting the Anarduino MiniWireless (US915) to The Things Network using OTAA.
 
 ## Intro
 The Anarduino MiniWireless LoRa board consists of an ATMEGA328p microcontroller connected to a HopeRF RFM95 LoRa radio module. This tutorial is for the **US915** band. Other bands will not work using these instructions, the differences are significant.
 The IBM LMIC framework is an Arduino port of the LoRaWAN-in-C framework provided by IBM.
+
+The US915 LoRaWAN band is divided into 72 sub channels. Each gateway uses 8 of these sub channels. 
+The Things Network uses sub channels 8-15. The example sketch demonstrates how to configure the LMIC to easily join any Things Network gateway in the US915 band. 
 
 ### Hardware
 * Solder a 78mm length of wire to the antenna pin.
@@ -11,8 +14,8 @@ The IBM LMIC framework is an Arduino port of the LoRaWAN-in-C framework provided
 ### Software
 * Install the IBM LMIC framework for Arduino.
 * Modify the library directly so that it will work in the US915 band and with our specific radio.
-* To the config of the example sketch, modify the Device EUI, Application EUI and Application Key parameters taken from The Things Network registration.
-* To the config of the example sketch, modify the pin mapping specifically for the Anarduino.
+* In the config of the example sketch, modify the Device EUI, Application EUI and Application Key parameters taken from The Things Network registration.
+* In the config of the example sketch, modify the pin mapping specifically for the Anarduino.
 ---
 ### Required hardware modifications to the Anarduino MiniWireless LoRA
 * Cut 78mm of wire and solder to the pin marked `ANT`. This is a 1/4 wave dipole for 915MHz.
@@ -75,7 +78,7 @@ const lmic_pinmap lmic_pins = {
   .dio = {2, 8, 7},
 };
 ```
-#### Uploading the Sketch
+#### Upload the Sketch
 * The default bootloader for the Anarduino is the **DUEMILANOVE**. Make sure the correct Board is selected.
 * If you have a USB-Serial connector that supports 3.3V and 5V modes make sure to select **5V**.
 * After the sketch uploads open the Serial Monitor and ensure that the speed is set to **9600**.
@@ -85,6 +88,3 @@ const lmic_pinmap lmic_pins = {
 ![Serial Monitor Join](https://github.com/bborncr/AnarduinoMiniWireless-TTN-Getting-Started/blob/master/images/joined.PNG)
 * Click on the **Data** tab to see the incoming data. The message "hello world" will be represented in hexadecimal as `68656C6C6F20776F726C64`.
 * Note that the window in the Console does not have historical data.
-
-
-

@@ -46,7 +46,7 @@ The only change is the constant from `10E6` to `8E6`
 ```
 ### Example Sketch
 Before the next section please register an account on The Things Network (https://thethingsnetwork.org).
-The example sketch can be found in the folder ttn-anarduino-otaa. This sketch is different from the default example sketch and contains changes tha are required for the US915 band and TTN.
+The example sketch can be found in the folder `ttn-anarduino-otaa`. This sketch is different from the default example sketch and contains changes that are required for the US915 band and TTN.
 #### Register a new Device in The Things Network
 * In the Console select Applications-->Register Application.
 * Add an Applications ID. In my case `ttn-getting-started`.

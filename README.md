@@ -79,6 +79,23 @@ const lmic_pinmap lmic_pins = {
   .dio = {2, 8, 7},
 };
 ```
+* Use only the US915 sub band channels 8-15 and "relax" the clock (already done in the example code but good for reference):
+```
+LMIC_selectSubBand(1);
+  //Disable FSB1, channels 0-7
+  for (int i = 0; i < 7; i++) {
+    if (i != 10)
+      LMIC_disableChannel(i);
+
+  }
+  //Disable FSB2-8, channels 16-72
+  for (int i = 16; i < 73; i++) {
+    if (i != 10)
+      LMIC_disableChannel(i);
+
+  }
+  LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100);
+```
 #### Upload the Sketch
 * The default bootloader for the Anarduino is the **DUEMILANOVE**. Make sure the correct Board is selected.
 * If you have a USB-Serial connector that supports 3.3V and 5V modes make sure to select **5V**.
